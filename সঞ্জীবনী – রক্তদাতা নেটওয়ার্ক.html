@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>সঞ্জীবনী – রক্তদাতা নেটওয়ার্ক</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 4C32 4 12 26 12 40a20 20 0 0 0 40 0C52 26 32 4 32 4z' fill='%23d4152f'/%3E%3Cpath d='M32 50C32 50 21 43.5 21 37C21 33.6 23.4 31.4 26.3 31.4C28.8 31.4 31 33 32 35C33 33 35.2 31.4 37.7 31.4C40.6 31.4 43 33.6 43 37C43 43.5 32 50 32 50z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Baloo+Da+2:wght@600;700;800&display=swap">
+<style>
+:root{--bg:#fff7f4;--card:#fff;--tx:#2b1613;--mu:#8a6d68;--bd:#f1dfd8;--g:#006a4e;--g2:#00463a;--gl:#e3f5ee;--red:#d4152f;--red2:#9c0b22;--redl:#fdebe8;--ok:#1fa971;--sh:0 12px 28px -16px rgba(156,11,34,.4);--bar:rgba(255,247,244,.93);color-scheme:light;box-sizing:border-box;padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#130909;--card:#211213;--tx:#f8ece9;--mu:#c8a8a3;--bd:#40252a;--g:#1f9a74;--g2:#006a4e;--gl:#10301f;--red:#f04a63;--red2:#c92c45;--redl:#3a1c1f;--sh:0 12px 28px -16px rgba(0,0,0,.8);--bar:rgba(19,9,9,.93);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#130909;--card:#211213;--tx:#f8ece9;--mu:#c8a8a3;--bd:#40252a;--g:#1f9a74;--g2:#006a4e;--gl:#10301f;--red:#f04a63;--red2:#c92c45;--redl:#3a1c1f;--sh:0 12px 28px -16px rgba(0,0,0,.8);--bar:rgba(19,9,9,.93);color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 120px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:"Hind Siliguri","Noto Sans Bengali",system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bar);z-index:10}
+button,select,input{font:inherit}
+.hero{position:relative;overflow:hidden;background:radial-gradient(120% 90% at 85% 0%,#e8213f 0%,#b10c27 45%,#6e0618 100%);color:#fff;padding:calc(30px + env(safe-area-inset-top,0px)) 22px 90px}
+.hero .in{max-width:780px;margin:0 auto;position:relative;z-index:1}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:22px;font-family:"Baloo Da 2","Hind Siliguri",sans-serif}
+.brand svg{width:46px;height:46px;filter:drop-shadow(0 4px 8px rgba(0,0,0,.3))}
+.seg{margin-left:auto;display:flex;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.38);border-radius:999px;padding:3px;font-family:"Hind Siliguri",sans-serif}
+.seg button{border:0;background:transparent;color:#fff;border-radius:999px;padding:6px 12px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap}
+.seg button.on{background:#fff;color:var(--red)}
+.hero h1{margin:26px 0 10px;font-family:"Baloo Da 2","Hind Siliguri",sans-serif;font-size:clamp(30px,8vw,48px);line-height:1.2;font-weight:700;max-width:12em;letter-spacing:-.2px}
+.hero p{margin:0;max-width:30em;opacity:.92;font-size:17px}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.cta a,.cta button{border:0;border-radius:14px;padding:13px 22px;font-weight:700;font-size:16px;cursor:pointer;text-decoration:none;font-family:"Baloo Da 2","Hind Siliguri",sans-serif}
+.b1{background:#fff;color:#a80c25}
+.b2{background:rgba(255,255,255,.16);color:#fff;border:1px solid rgba(255,255,255,.4)!important}
+.drop{position:absolute;right:-50px;top:70px;width:300px;opacity:.16;pointer-events:none}
+.wrap{max-width:780px;margin:-56px auto 0;padding:0 16px 150px;position:relative}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);background:var(--card);border-radius:20px;box-shadow:var(--sh);border:1px solid var(--bd);overflow:hidden}
+.st{padding:16px 6px;text-align:center}
+.st+.st{border-left:1px solid var(--bd)}
+.st b{display:block;font-family:"Baloo Da 2","Hind Siliguri",sans-serif;font-size:30px;color:var(--red);line-height:1.15}
+.st span{font-size:14px;color:var(--mu)}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:11;background:var(--bar);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);margin:18px -16px 0;padding:12px 16px 8px;border-bottom:1px solid var(--bd)}
+.scroll{display:flex;gap:8px;overflow-x:auto;padding:2px 0 8px;scrollbar-width:none}
+.scroll::-webkit-scrollbar{display:none}
+.t{flex:none;border:1px solid var(--bd);background:var(--card);color:var(--tx);border-radius:999px;padding:8px 20px;cursor:pointer;font-weight:500;font-size:17px}
+.t.on{background:var(--tx);border-color:var(--tx);color:var(--bg)}
+.g{flex:none;border:1.5px solid var(--bd);background:var(--card);color:var(--red);border-radius:16px;padding:6px 0;width:60px;cursor:pointer;font-weight:700;font-size:20px;display:flex;flex-direction:column;align-items:center;line-height:1.2;font-family:"Baloo Da 2","Hind Siliguri",sans-serif}
+.g small{font-size:16px;font-weight:600;color:var(--mu);line-height:1.1}
+.g.on{background:linear-gradient(150deg,var(--red),var(--red2));border-color:transparent;color:#fff}
+.g.on small{color:#ffd9de}
+.srch{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+select,input{width:100%;padding:13px 14px;border:1.5px solid var(--bd);border-radius:14px;background:var(--card);color:var(--tx);outline:none;font-size:16px}
+select:focus,input:focus{border-color:var(--red);box-shadow:0 0 0 3px rgba(212,21,47,.18)}
+.opt{display:none;align-items:center;gap:8px;font-size:14px;color:var(--mu);padding-top:8px;cursor:pointer}
+.opt.show{display:flex}
+.opt input,.sw input{width:19px;height:19px;padding:0;accent-color:var(--red)}
+.tools{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-top:8px}
+.sw{display:flex;align-items:center;gap:8px;font-size:14px;cursor:pointer;color:var(--mu)}
+.clr{display:none;border:1px solid var(--bd);background:var(--card);color:var(--red);border-radius:999px;padding:4px 14px;font-weight:600;cursor:pointer}
+.hd{display:flex;justify-content:space-between;align-items:baseline;margin:22px 2px 6px}
+.hd h2{margin:0;font-family:"Baloo Da 2","Hind Siliguri",sans-serif;font-size:24px}
+.hd span{color:var(--mu);font-size:15px}
+.list{display:grid;gap:12px;margin-top:8px}
+@media(min-width:640px){.list{grid-template-columns:1fr 1fr}}
+.d{background:var(--card);border:1px solid var(--bd);border-radius:22px;padding:16px;box-shadow:var(--sh);animation:in .35s both}
+@keyframes in{from{opacity:0;transform:translateY(10px)}}
+@media(prefers-reduced-motion:reduce){.d{animation:none}html{scroll-behavior:auto}.sk{animation:none}}
+.top{display:flex;align-items:center;gap:12px}
+.av2{flex:none;width:56px;height:56px;border-radius:50%;background:var(--redl);color:var(--red);display:grid;place-items:center;font-weight:700;font-size:22px}
+.info{flex:1;min-width:0}
+.nm{font-weight:600;font-size:19px;overflow-wrap:anywhere;line-height:1.3}
+.lc{color:var(--mu);font-size:15px}
+.vt{width:1.05em;height:1.05em;color:var(--g);vertical-align:-.16em;margin-left:5px;flex:none}
+.bb{flex:none;min-width:62px;height:54px;padding:0 12px;border-radius:16px;background:linear-gradient(150deg,var(--red),var(--red2));color:#fff;display:grid;place-items:center;font-weight:800;font-size:20px;font-family:"Baloo Da 2","Hind Siliguri",sans-serif;box-shadow:0 8px 16px -8px rgba(212,21,47,.6)}
+.pills{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
+.badge{display:inline-block;font-size:14px;font-weight:500;padding:4px 12px;border-radius:999px}
+.badge.ok{background:var(--gl);color:var(--g)}
+.badge.wt{background:rgba(224,160,48,.18);color:#c98a12}
+.acts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.btn{height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;text-decoration:none;font-weight:700;font-size:16px;font-family:"Baloo Da 2","Hind Siliguri",sans-serif}
+.btn.call{background:linear-gradient(150deg,var(--red),var(--red2));color:#fff}
+.btn.wa{background:var(--g);color:#fff}
+.btn:active,.g:active,.t:active{transform:scale(.97)}
+.sk{height:150px;border-radius:22px;border:1px solid var(--bd);background:linear-gradient(90deg,var(--card) 25%,var(--redl) 50%,var(--card) 75%);background-size:200% 100%;animation:sh 1.2s infinite}
+@keyframes sh{to{background-position:-200% 0}}
+.empty{grid-column:1/-1;text-align:center;color:var(--mu);padding:44px 12px;background:var(--card);border:1.5px dashed var(--bd);border-radius:20px}
+.eb{display:flex;gap:8px;justify-content:center;margin-top:14px;flex-wrap:wrap}
+.eb button{border:1px solid var(--bd);background:var(--bg);color:var(--red);border-radius:12px;padding:10px 16px;font-weight:600;cursor:pointer}
+.eb .g2{background:var(--red);color:#fff;border-color:var(--red)}
+.info-box{margin-top:26px;background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:4px 16px}
+.info-box summary{cursor:pointer;font-weight:600;padding:12px 0}
+.tbl{width:100%;border-collapse:collapse;font-size:14px;margin-bottom:12px}
+.tbl td{padding:7px 4px;border-top:1px solid var(--bd)}
+.tbl td:first-child{font-weight:700;color:var(--red);width:64px}
+.nav{position:fixed;left:0;right:0;bottom:0;z-index:20;display:flex;justify-content:space-around;align-items:flex-end;background:var(--card);border-top:1px solid var(--bd);padding:8px 12px calc(8px + env(safe-area-inset-bottom,0px));box-shadow:0 -10px 26px -14px rgba(0,0,0,.3)}
+.nav button{background:none;border:0;color:var(--mu);font-size:13px;display:flex;flex-direction:column;align-items:center;gap:1px;cursor:pointer;min-width:76px;font-family:"Hind Siliguri",sans-serif}
+.nav button i{font-style:normal;font-size:22px}
+.nav button.on{color:var(--red);font-weight:600}
+.nav .cta2{background:linear-gradient(150deg,var(--red),var(--red2));color:#fff;border-radius:999px;padding:13px 24px;font-size:17px;font-weight:700;flex-direction:row;gap:6px;margin-top:-30px;min-width:0;box-shadow:0 12px 22px -6px rgba(212,21,47,.65);font-family:"Baloo Da 2","Hind Siliguri",sans-serif}
+.nav .cta2 i{font-size:18px}
+#stats{scroll-margin-top:calc(env(safe-area-inset-top,0px) + 12px)}
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:flex-end;justify-content:center;z-index:30}
+.ov.show{display:flex}
+.sheet{background:var(--card);width:100%;max-width:500px;border-radius:26px 26px 0 0;padding:22px 20px calc(20px + env(safe-area-inset-bottom,0px));max-height:92vh;overflow:auto;animation:up .25s}
+@keyframes up{from{transform:translateY(40px);opacity:0}}
+@media(min-width:600px){.ov{align-items:center}.sheet{border-radius:26px}}
+.sheet h2{margin:0;color:var(--red);font-family:"Baloo Da 2","Hind Siliguri",sans-serif}
+label{display:block;margin:12px 0 4px;font-size:14px;color:var(--mu);font-weight:500}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.row{display:flex;gap:10px;margin-top:18px}
+.row button{flex:1;padding:13px;border-radius:12px;border:1px solid var(--bd);cursor:pointer;background:var(--card);color:var(--tx)}
+.row .ok{background:var(--red);border-color:var(--red);color:#fff;font-weight:700}
+.note{font-size:12.5px;color:var(--mu);margin-top:12px;background:var(--redl);padding:8px 10px;border-radius:10px}
+.err{color:var(--red);font-size:14px;min-height:20px;margin-top:6px}
+.toast{position:fixed;left:50%;bottom:calc(100px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);background:var(--g);color:#fff;padding:10px 18px;border-radius:999px;opacity:0;pointer-events:none;transition:.3s;z-index:40;font-weight:500}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+footer{text-align:center;color:var(--mu);font-size:13px;padding:30px 0 0}
+footer a{color:var(--red);font-weight:600;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="hero"><div class="in">
+  <div class="brand"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4C32 4 12 26 12 40a20 20 0 0 0 40 0C52 26 32 4 32 4z M32 50C32 50 21 43.5 21 37C21 33.6 23.4 31.4 26.3 31.4C28.8 31.4 31 33 32 35C33 33 35.2 31.4 37.7 31.4C40.6 31.4 43 33.6 43 37C43 43.5 32 50 32 50z" fill="#fff" fill-rule="evenodd"/></svg>সঞ্জীবনী<div class="seg" id="seg"><button data-t="light">☀️ লাইট</button><button data-t="dark">🌙 ডার্ক</button></div></div>
+  <h1>হৃদয়ের টানে নিঃস্বার্থ রক্তদান</h1>
+  <p>বরিশাল বিভাগের স্বেচ্ছাসেবী রক্তদাতাদের নেটওয়ার্ক। প্রয়োজনে কাছের দাতাকে খুঁজে নিন।</p>
+  <div class="cta"><a class="b1" href="#find">🔍 রক্ত খুঁজুন</a><button class="b2" id="add2">＋ দাতা হোন</button></div>
+</div>
+<svg class="drop" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4C32 4 12 26 12 40a20 20 0 0 0 40 0C52 26 32 4 32 4z" fill="#fff"/></svg></div>
+<div class="wrap">
+  <div id="demo" style="display:none;background:rgba(224,160,48,.18);color:#c98a12;padding:10px 14px;border-radius:14px;margin-bottom:12px;font-size:14px">⚠️ ডেমো মোড: Firebase সেট করা হয়নি, তাই তথ্য শুধু এই ডিভাইসে থাকবে।</div>
+  <div class="stats" id="stats">
+    <div class="st"><b id="c1">০</b><span>দাতা</span></div>
+    <div class="st"><b id="c2">০</b><span>উপজেলা</span></div>
+    <div class="st"><b id="c3">০</b><span>ব্লাড গ্রুপ</span></div>
+  </div>
+  <div class="bar" id="find">
+    <div class="scroll" id="tabs"></div>
+    <div class="scroll" id="groups"></div>
+    <div class="srch"><input id="q" placeholder="🔍 নাম খুঁজুন"><select id="up"></select></div>
+    <label class="opt" id="comp"><input type="checkbox" id="cb"><span id="cbt"></span></label>
+    <div class="tools"><label class="sw"><input type="checkbox" id="ro"><span>🟢 শুধু রক্ত দিতে পারবেন এমন দাতা</span></label><button class="clr" id="clr">✕ মুছুন</button></div>
+  </div>
+  <div class="hd"><h2>রক্তদাতা তালিকা</h2><span id="hint"></span></div>
+  <div class="list" id="list"></div>
+  <details class="info-box" id="ib"><summary>🧬 কে কাকে রক্ত দিতে পারে?</summary>
+    <table class="tbl" id="tbl"></table></details>
+  <footer>রক্তদাতার তথ্য শুধু রক্তদানের প্রয়োজনে ব্যবহার করুন। 🩸<br>সাধারণত ৩ মাস পরপর রক্ত দেওয়া যায়।<div style="margin-top:8px;font-size:12px">তথ্যে ভুল হলে যোগাযোগ করুন: <a href="https://wa.me/sazzadsayem/" target="_blank" rel="noopener" style="color:var(--red);font-weight:600;text-decoration:none">💬 sazzadsayem</a></div><div style="margin-top:14px;padding-top:12px;border-top:1px solid var(--bd)">Vision by <a href="https://wa.me/+8801798248200" target="_blank" rel="noopener" style="color:var(--red);font-weight:600;text-decoration:none">Monzurul Alam Sakib</a> | Designed by <a href="https://sazzadsayem.bio.link/" target="_blank" rel="noopener" style="color:var(--red);font-weight:600;text-decoration:none">Sazzad Sayem</a></div></footer>
+</div>
+<div class="nav"><button id="nv1"><i>🔍</i>খুঁজুন</button><button class="cta2" id="add"><i>＋</i>দাতা হোন</button><button id="nv3"><i>🧬</i>গ্রুপ তথ্য</button></div>
+<div class="toast" id="toast">ধন্যবাদ! আপনার নাম যুক্ত হয়েছে।</div>
+
+<div class="ov" id="ov"><div class="sheet">
+  <h2>রক্তদাতা</h2>
+  <label>নাম</label><input id="fn" maxlength="60" placeholder="আপনার পূর্ণ নাম">
+  <div class="two"><div><label>রক্তের গ্রুপ</label><select id="fb"></select></div><div><label>জেলা</label><select id="fd"></select></div></div>
+  <label>উপজেলা</label><select id="fu"></select>
+  <label>মোবাইল (১১ ডিজিট)</label><input id="fp" inputmode="numeric" maxlength="11" placeholder="01XXXXXXXXX">
+  <label>সর্বশেষ রক্ত দিয়েছেন (না দিলে খালি রাখুন)</label><input id="fl" type="date">
+  <div class="note">এই তথ্য সবাই দেখতে পাবে। রক্ত দিতে ইচ্ছুক হলেই জমা দিন।</div>
+  <div class="err" id="err"></div>
+  <div class="row"><button id="cancel">বাতিল</button><button class="ok" id="save">জমা দিন</button></div>
+</div></div>
+
+<script>
+var D={"বরিশাল":["বরিশাল সদর","বাকেরগঞ্জ","বাবুগঞ্জ","উজিরপুর","বানারীপাড়া","গৌরনদী","আগৈলঝাড়া","মেহেন্দিগঞ্জ","মুলাদী","হিজলা"],
+"ভোলা":["ভোলা সদর","বোরহানউদ্দিন","চরফ্যাশন","দৌলতখান","তজুমদ্দিন","লালমোহন","মনপুরা"],
+"পটুয়াখালী":["পটুয়াখালী সদর","বাউফল","গলাচিপা","কলাপাড়া","মির্জাগঞ্জ","দশমিনা","রাঙ্গাবালী","দুমকি"],
+"পিরোজপুর":["পিরোজপুর সদর","নেছারাবাদ (স্বরূপকাঠী)","মঠবাড়িয়া","ভাণ্ডারিয়া","কাউখালী","জিয়ানগর (ইন্দুরকানি)","নাজিরপুর"],
+"বরগুনা":["বরগুনা সদর","আমতলী","বেতাগী","পাথরঘাটা","বামনা","তালতলী"],
+"ঝালকাঠি":["ঝালকাঠি সদর","নলছিটি","রাজাপুর","কাঁঠালিয়া"]};
+var BG=["A+","A-","B+","B-","AB+","AB-","O+","O-"];
+var COMP={"A+":["A+","A-","O+","O-"],"A-":["A-","O-"],"B+":["B+","B-","O+","O-"],"B-":["B-","O-"],"AB+":BG,"AB-":["A-","B-","AB-","O-"],"O+":["O+","O-"],"O-":["O-"]};
+var st={dist:"",bg:"",up:"",q:"",comp:false,ro:false},donors=[],col=null,loaded=true,KEY="rb-donors";
+var VT='<svg class="vt" viewBox="0 0 24 24" role="img" aria-label="যাচাইকৃত"><g fill="currentColor"><rect x="4" y="4" width="16" height="16" rx="4"/><rect x="4" y="4" width="16" height="16" rx="4" transform="rotate(30 12 12)"/><rect x="4" y="4" width="16" height="16" rx="4" transform="rotate(60 12 12)"/></g><path d="M7.8 12.4l3 3 5.4-6" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+function $(i){return document.getElementById(i)}
+function bn(n){return String(n).replace(/\d/g,function(d){return "০১২৩৪৫৬৭৮৯"[d]})}
+function esc(s){var d=document.createElement("div");d.textContent=s;return d.innerHTML}
+function opts(el,arr,first){el.innerHTML=(first?'<option value="">'+first+'</option>':'')+arr.map(function(a){return '<option>'+esc(a)+'</option>'}).join("")}
+function ready(d){if(!d.ld)return true;return (Date.now()-new Date(d.ld).getTime())/864e5>=90}
+function cnt(id,v){var el=$(id),from=+el.dataset.v||0;el.dataset.v=v;if(from===v||matchMedia("(prefers-reduced-motion: reduce)").matches){el.textContent=bn(v);return}var t0=null;function f(t){if(!t0)t0=t;var k=Math.min((t-t0)/500,1);el.textContent=bn(Math.round(from+(v-from)*k));if(k<1)requestAnimationFrame(f)}requestAnimationFrame(f)}
+function chips(){
+  $("tabs").innerHTML=["সব"].concat(Object.keys(D)).map(function(x,i){var v=i?x:"";return '<button class="t'+(v===st.dist?' on':'')+'" data-v="'+v+'">'+x+'</button>'}).join("");
+  var base=donors.filter(function(d){return !st.dist||d.dist===st.dist});
+  $("groups").innerHTML=["সব"].concat(BG).map(function(x,i){var v=i?x:"";var n=v?base.filter(function(d){return d.bg===v}).length:base.length;return '<button class="g'+(v===st.bg?' on':'')+'" data-v="'+v+'">'+x+'<small>'+bn(n)+'</small></button>'}).join("");
+  var ups=st.dist?D[st.dist]:[].concat.apply([],Object.keys(D).map(function(k){return D[k]}));
+  opts($("up"),ups,"📍 সব উপজেলা");$("up").value=ups.indexOf(st.up)>-1?st.up:"";st.up=$("up").value;
+  $("comp").classList.toggle("show",!!st.bg);
+  if(!st.bg)st.comp=false;
+  $("cb").checked=st.comp;$("cbt").textContent=st.bg?st.bg+" রোগীকে দিতে পারবেন এমন সব গ্রুপও দেখান":"";
+}
+function render(){
+  chips();
+  var q=st.q.toLowerCase(),ok=st.bg?(st.comp?COMP[st.bg]:[st.bg]):null;
+  var l=donors.filter(function(d){return(!st.dist||d.dist===st.dist)&&(!ok||ok.indexOf(d.bg)>-1)&&(!st.up||d.up===st.up)&&(!st.ro||ready(d))&&(!q||String(d.name).toLowerCase().indexOf(q)>-1)});
+  l.sort(function(a,b){return ((b.verified===true)-(a.verified===true))||(ready(b)-ready(a))});
+  var act=st.dist||st.bg||st.up||st.q||st.ro;$("clr").style.display=act?"inline-block":"none";
+  cnt("c1",l.length);
+  cnt("c2",new Set(l.map(function(d){return d.up})).size);
+  cnt("c3",new Set(l.map(function(d){return d.bg})).size);
+  $("hint").textContent=bn(l.length)+" জন";
+  if(!loaded){$("list").innerHTML='<div class="sk"></div><div class="sk"></div><div class="sk"></div>';return}
+  $("list").innerHTML=l.length?l.map(function(d,i){
+    var p=String(d.phone||"").replace(/\D/g,""),w="880"+p.replace(/^0/,""),r=ready(d);
+    return '<div class="d" style="animation-delay:'+Math.min(i,10)*30+'ms"><div class="top"><div class="av2">'+esc(String(d.name).charAt(0))+'</div><div class="info"><div class="nm">'+esc(d.name)+(d.verified===true?VT:'')+'</div><div class="lc">📍 '+esc(d.up)+', '+esc(d.dist)+'</div></div><div class="bb">'+esc(d.bg)+'</div></div><div class="pills"><span class="badge '+(r?'ok">✅ রক্ত দিতে পারবেন':'wt">⏳ কিছুদিন পরে')+'</span></div><div class="acts"><a class="btn call" href="tel:'+p+'">📞 কল</a><a class="btn wa" href="https://wa.me/'+w+'" target="_blank" rel="noopener">💬 WhatsApp</a></div></div>'
+  }).join(""):'<div class="empty"><div style="font-size:40px">🩸</div><div style="font-weight:600;margin-top:6px">কোনো দাতা পাওয়া যায়নি</div><div style="font-size:14px">ফিল্টার বদলে দেখুন, অথবা দাতা হিসেবে নাম লিখুন।</div><div class="eb"><button onclick="clearAll()">✕ ফিল্টার মুছুন</button><button class="g2" onclick="openForm()">＋ দাতা হোন</button></div></div>';
+}
+$("tbl").innerHTML=BG.map(function(g){return '<tr><td>'+g+'</td><td>নিতে পারে: '+COMP[g].join(", ")+'</td></tr>'}).join("");
+$("tabs").onclick=function(e){var b=e.target.closest("button");if(!b)return;st.dist=b.dataset.v;render()};
+$("groups").onclick=function(e){var b=e.target.closest("button");if(!b)return;st.bg=b.dataset.v;render()};
+$("up").onchange=function(){st.up=this.value;render()};
+$("q").oninput=function(){st.q=this.value.trim();render()};
+$("cb").onchange=function(){st.comp=this.checked;render()};
+$("ro").onchange=function(){st.ro=this.checked;render()};
+function clearAll(){st.dist="";st.bg="";st.up="";st.q="";st.comp=false;st.ro=false;$("q").value="";$("ro").checked=false;render()}
+$("clr").onclick=clearAll;
+function fu(){opts($("fu"),D[$("fd").value])}
+opts($("fb"),BG);opts($("fd"),Object.keys(D));fu();$("fd").onchange=fu;
+function openForm(){$("err").textContent="";$("ov").classList.add("show")}
+$("add").onclick=openForm;$("add2").onclick=openForm;
+$("cancel").onclick=function(){$("ov").classList.remove("show")};
+$("ov").onclick=function(e){if(e.target===this)this.classList.remove("show")};
+function toast(){var t=$("toast");t.classList.add("show");setTimeout(function(){t.classList.remove("show")},2600)}
+$("save").onclick=async function(){
+  var name=$("fn").value.trim(),ph=$("fp").value.trim();
+  if(name.length<2){$("err").textContent="নাম লিখুন।";return}
+  if(!/^01[3-9]\d{8}$/.test(ph)){$("err").textContent="সঠিক মোবাইল নম্বর দিন।";return}
+  if(donors.some(function(d){return d.phone===ph})){$("err").textContent="এই নম্বর আগে থেকেই নিবন্ধিত।";return}
+  var rec={name:name,bg:$("fb").value,dist:$("fd").value,up:$("fu").value,phone:ph,ld:$("fl").value||"",ts:Date.now()};
+  try{
+    if(col){await col.add(rec)}else{donors.unshift(rec);try{localStorage.setItem(KEY,JSON.stringify(donors))}catch(e){}render()}
+    $("ov").classList.remove("show");$("fn").value="";$("fp").value="";$("fl").value="";toast();
+  }catch(e){$("err").textContent=(e&&e.code==="permission-denied")?"এই নম্বর আগে থেকেই নিবন্ধিত, অথবা তথ্য সঠিক নয়।":"সংরক্ষণ করা যায়নি। ইন্টারনেট দেখে আবার চেষ্টা করুন।"}
+};
+function isDark(){var t=document.documentElement.getAttribute("data-theme");return t?t==="dark":matchMedia("(prefers-color-scheme: dark)").matches}
+function mark(){var d=isDark()?"dark":"light";Array.prototype.forEach.call(document.querySelectorAll("#seg button"),function(b){b.classList.toggle("on",b.dataset.t===d)})}
+function setTh(t){document.documentElement.setAttribute("data-theme",t);mark();try{localStorage.setItem("rb-theme",t)}catch(e){}}
+try{var sv=localStorage.getItem("rb-theme");if(sv)setTh(sv);else mark()}catch(e){mark()}
+$("seg").onclick=function(e){var b=e.target.closest("button");if(b)setTh(b.dataset.t)};
+$("nv1").onclick=function(){$("stats").scrollIntoView({behavior:"smooth",block:"start"})};
+$("nv3").onclick=function(){var b=$("ib");b.open=true;b.scrollIntoView({behavior:"smooth",block:"center"})};
+function navMark(){var ib=$("ib").getBoundingClientRect().top,y=window.scrollY;$("nv1").classList.toggle("on",y>150&&ib>window.innerHeight*0.6);$("nv3").classList.toggle("on",ib<=window.innerHeight*0.6)}
+window.addEventListener("scroll",navMark,{passive:true});navMark();
+try{donors=JSON.parse(localStorage.getItem(KEY)||"[]")}catch(e){}
+render();
+(async function(){
+  try{
+    var db=await claude.use("db");if(!db)return;
+    col=db.collection("donors");donors=[];loaded=false;render();
+    col.orderBy("ts","desc").limit(500).onSnapshot(function(x){donors=x.docs.map(function(y){return y.data()});loaded=true;render()},function(){loaded=true;render()});
+  }catch(e){loaded=true;render()}
+})();
+</script>
+</body>
+</html>
